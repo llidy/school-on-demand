@@ -1,5 +1,6 @@
 package br.com.schoolondemand.domain.student
 
+import br.com.schoolondemand.domain.student.dto.StudentResponseDto
 import java.time.Instant
 import java.util.*
 import javax.persistence.*
@@ -12,25 +13,39 @@ import javax.validation.constraints.NotNull
 class Student(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val Id: Long? = null,
+    var id: Long? = null,
     @field: NotBlank
-    val name: String,
+    var name: String,
     @field: NotBlank
-    val cpf: String,
+    var cpf: String,
     @field: NotBlank
     @field: Email
-    val email: String,
+    var email: String,
     @field: NotBlank
-    val rg: String,
+    var rg: String,
     @field: NotBlank
-    val birthDate: String,
+    var birthDate: String,
     @field: NotBlank
-    val motherName: String,
+    var motherName: String,
     @field: NotBlank
-    val fatherName: String,
+    var fatherName: String,
     @field: NotNull
     val registrationNumber: Instant? = Instant.now(),
     @NotNull
     val initialDate: Instant? = Instant.now()
 
 )
+
+{
+    fun updateStudent(student: Student){
+        name = student.name
+        cpf = student.cpf
+        email = student.email
+        rg = student.rg
+        birthDate = student.birthDate
+        motherName = student.motherName
+        fatherName = student.motherName
+    }
+
+
+}

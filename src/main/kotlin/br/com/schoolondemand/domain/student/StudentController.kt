@@ -1,13 +1,12 @@
 package br.com.schoolondemand.domain.student
 
+import br.com.schoolondemand.domain.student.dto.StudentPutDto
 import br.com.schoolondemand.domain.student.dto.StudentRequestDto
 import br.com.schoolondemand.domain.student.dto.StudentResponseDto
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties
-import org.springframework.data.domain.Page
-import org.springframework.data.domain.Pageable
-import org.springframework.data.web.PageableDefault
 import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.util.UriComponentsBuilder
 import javax.validation.Valid
 
 @RestController
@@ -16,34 +15,50 @@ class StudentController(
     private val studentService: StudentService) {
 
     @GetMapping
-    fun findAllByStudent(): List<StudentResponseDto> {
-        return studentService.findAllByStudentGrouped()
-    }
+    fun findAllStudents(studentResponseDto: StudentResponseDto
+    ) = studentService.findAllStudents(studentResponseDto)
+
 
     @GetMapping("name/{name}")
     fun findByNameStudent(@PathVariable name: String
-    ): List<StudentRequestDto>{
-        return studentService.findByNameStudent(
+    ) = studentService.findByNameStudent(
             name)
-    }
 
     @GetMapping("cpf/{cpf}")
     fun findByCpfStudent(@PathVariable cpf: String
-    ): List<StudentRequestDto>{
-        return studentService.findByCpfStudent(
+    ) = studentService.findByCpfStudent(
             cpf)
-    }
 
     @GetMapping("email/{email}")
     fun findByEmailStudent(@PathVariable email: String
-    ): List<StudentRequestDto>{
-        return studentService.findByEmailStudent(
+    ) = studentService.findByEmailStudent(
             email)
-    }
+
+    @GetMapping("/{id}")
+    fun findByIdStudent(@PathVariable id: Long
+    ) = studentService.findByIdStudent(id)
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun registrationStudent(@RequestBody @Valid studentRequestDto: StudentRequestDto){
-        return studentService.createRegistrationStudent(studentRequestDto)
+    fun createRegistrationStudent(
+        @RequestBody @Valid studentRequestDto: StudentRequestDto,
+        uriBuilder: UriComponentsBuilder
+    ): ResponseEntity<StudentResponseDto> {
+        val studentResponseDto = studentService.createRegistrationStudent(studentRequestDto)
+        val uri = uriBuilder.path("/students/${studentResponseDto.id}").build().toUri()
+        return ResponseEntity.created(uri).body(studentResponseDto)
     }
+
+    @PutMapping("/{id}")
+    fun updateRegistrationStudent(@PathVariable id: Long, @RequestBody studentPutDto: StudentPutDto
+    ): ResponseEntity<StudentResponseDto>{
+        val studentResponseDto = studentService.updateRegistrationStudent(id, studentPutDto)
+        return ResponseEntity.ok(studentResponseDto)
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteRegistrationStudent(@PathVariable id: Long
+    ) = studentService.deleteRegistrationStudent(id)
+
 }

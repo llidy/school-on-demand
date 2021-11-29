@@ -1,29 +1,19 @@
 package br.com.schoolondemand.domain.student.dto
 
 import br.com.schoolondemand.domain.student.Student
-import java.time.Instant
-import javax.validation.constraints.Email
-import javax.validation.constraints.NotBlank
-import javax.validation.constraints.NotNull
 
-data class StudentRequestDto (
-    @field: NotBlank
-    val name: String,
-    @field: NotBlank
+data class StudentPutDto (
+
+    var name: String,
     val cpf: String,
-    @field: NotBlank
-    @field: Email
     val email: String,
-    @field: NotBlank
     val rg: String,
-    @field: NotBlank
     val birthDate: String,
-    @field: NotBlank
     val motherName: String,
-    @field: NotBlank
-    val fatherName: String,
-){
-    fun convertRequestDtoToStudent(): Student {
+    val fatherName: String
+)
+{
+    fun convertToStudent(): Student {
         return Student(
             name = name,
             cpf = cpf,
@@ -35,4 +25,6 @@ data class StudentRequestDto (
 
         )
     }
+
+
 }

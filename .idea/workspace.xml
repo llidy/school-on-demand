@@ -6,6 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="f0af9b1b-e1c1-49e7-b520-1f76817faebe" name="Changes" comment="Add classe dto">
       <changelist_data name="llidy" email="santoslid@gmailcom" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentPutDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/br/com/schoolondemand/student/StudentControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/Student.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/Student.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentRequestDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentRequestDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentResponseDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentResponseDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentResponseDto.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +57,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -80,7 +99,38 @@
       <recent name="br.com.schoolondemand.domain.student" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.SchoolOnDemandApplicationKt">
+    <configuration name="StudentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="school-on-demand" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.schoolondemand.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.schoolondemand.student" />
+      <option name="MAIN_CLASS_NAME" value="br.com.schoolondemand.student.StudentControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentControllerTest.saveNewStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="school-on-demand" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.schoolondemand.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.schoolondemand.student" />
+      <option name="MAIN_CLASS_NAME" value="br.com.schoolondemand.student.StudentControllerTest" />
+      <option name="METHOD_NAME" value="saveNewStudent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SchoolOnDemandApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-11.0.12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -110,6 +160,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.SchoolOnDemandApplicationKt" />
+        <item itemvalue="JUnit.StudentControllerTest.saveNewStudent" />
+        <item itemvalue="JUnit.StudentControllerTest" />
       </list>
     </recent_temporary>
   </component>
