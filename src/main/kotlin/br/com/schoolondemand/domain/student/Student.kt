@@ -2,6 +2,8 @@ package br.com.schoolondemand.domain.student
 
 import br.com.schoolondemand.domain.student.dto.StudentResponseDto
 import java.time.Instant
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 import javax.persistence.*
 import javax.validation.constraints.Email
@@ -30,14 +32,13 @@ class Student(
     @field: NotBlank
     var fatherName: String,
     @field: NotNull
-    val registrationNumber: Instant? = Instant.now(),
+    val registrationNumber: String = generateRegistration(),
     @NotNull
-    val initialDate: Instant? = Instant.now()
+    val initialDate: Instant = Instant.now()
 
-)
+) {
 
-{
-    fun updateStudent(student: Student){
+    fun updateStudent(student: Student) {
         name = student.name
         cpf = student.cpf
         email = student.email
@@ -46,6 +47,9 @@ class Student(
         motherName = student.motherName
         fatherName = student.motherName
     }
-
-
 }
+    fun generateRegistration(): String{
+        var date: String = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"))
+        var instant: String = Instant.now().nano.toString().substring(0,6)
+        return "${date}${instant}"
+    }

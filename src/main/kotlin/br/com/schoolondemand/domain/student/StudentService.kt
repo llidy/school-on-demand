@@ -4,6 +4,11 @@ import br.com.schoolondemand.domain.student.dto.StudentPutDto
 import br.com.schoolondemand.domain.student.dto.StudentRequestDto
 import br.com.schoolondemand.domain.student.dto.StudentResponseDto
 import org.springframework.stereotype.Service
+import org.springframework.validation.Errors
+import org.springframework.validation.Validator
+import org.springframework.web.bind.WebDataBinder
+import org.springframework.web.bind.annotation.InitBinder
+import java.util.*
 import java.util.stream.Collectors
 
 
@@ -11,7 +16,6 @@ import java.util.stream.Collectors
 class StudentService(
     private val studentRepository: StudentRepository,
     ) {
-
     fun findAllStudents(studentResponseDto: StudentResponseDto):List<StudentResponseDto> =
         studentRepository.findAll().stream().map { t ->
             StudentResponseDto(
@@ -40,9 +44,15 @@ class StudentService(
         val student = studentRepository.save(studentRequestDto.convertRequestDtoToStudent())
         return StudentResponseDto().studentConvertToResponse(student)
     }
+
+    @InitBinder("studentRequestDto")
+    fun binder(binder: WebDataBinder){
+       binder.addValidators(SingleField(studentRepository))
+    }
+
     fun updateRegistrationStudent(id: Long, studentPutDto: StudentPutDto): StudentResponseDto {
         val student = studentRepository.findById(id).get()
-        val studentUpdate = student.updateStudent(studentPutDto.convertToStudent())
+        student.updateStudent(studentPutDto.convertToStudent())
         studentRepository.save(student)
         return StudentResponseDto().studentConvertToResponse(student)
 

@@ -11,7 +11,8 @@ data class StudentResponseDto (
     val rg: String = "",
     val birthDate: String = "",
     val motherName: String = "",
-    val fatherName: String = ""
+    val fatherName: String = "",
+    val registrationNumber: String = ""
 
 ) {
     fun convertResponseToStudent(): Student {
@@ -37,7 +38,8 @@ data class StudentResponseDto (
             rg = student.rg,
             birthDate = student.birthDate,
             motherName = student.motherName,
-            fatherName = student.fatherName
+            fatherName = student.fatherName ,
+            registrationNumber = student.registrationNumber
 
         )
     }

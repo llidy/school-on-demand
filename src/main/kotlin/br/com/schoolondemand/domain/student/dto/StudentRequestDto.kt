@@ -1,10 +1,8 @@
 package br.com.schoolondemand.domain.student.dto
 
 import br.com.schoolondemand.domain.student.Student
-import java.time.Instant
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank
-import javax.validation.constraints.NotNull
 
 data class StudentRequestDto (
     @field: NotBlank

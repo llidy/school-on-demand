@@ -4,26 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0af9b1b-e1c1-49e7-b520-1f76817faebe" name="Changes" comment="Add classe dto">
-      <changelist_data name="llidy" email="santoslid@gmailcom" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentPutDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/br/com/schoolondemand/student/StudentControllerTest.kt" afterDir="false" />
+    <list default="true" id="f0af9b1b-e1c1-49e7-b520-1f76817faebe" name="Changes" comment="Incluindo: tratativa de erros e validator unico">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/SingleField.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/shared/OverallExceptionHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/Student.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/Student.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentRequestDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentRequestDto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentResponseDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/dto/StudentResponseDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1_20211112114000__create_table_student.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_20211112114000__create_table_student.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/school-on-demand.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/school-on-demand.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentPutDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentPutDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentRequestDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/dto/StudentResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1_20211112114000__create_table_student.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1_20211112114000__create_table_student.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +56,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/Student.kt" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/SingleField.kt" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" root0="SKIP_INSPECTION" />
   </component>
@@ -94,6 +96,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anesa.DESKTOP-R5U2IUS.000\Documents\workspace\school-on-demand\src\main\resources" />
       <recent name="C:\Users\anesa.DESKTOP-R5U2IUS.000\Documents\workspace\school-on-demand\src\main\resources\db\migration" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="br.com.schoolondemand.domain.student" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="br.com.schoolondemand.domain.student" />
@@ -174,6 +179,14 @@
       <option name="presentableId" value="Default" />
       <updated>1636723704000</updated>
     </task>
+    <task id="LOCAL-00001" summary="Inserção update, delete crud">
+      <created>1638214691769</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638214691769</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add classe dto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add classe dto" />
+    <MESSAGE value="Inserção update, delete crud" />
+    <MESSAGE value="Incluindo: tratativa de erros e validator unico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Incluindo: tratativa de erros e validator unico" />
   </component>
 </project>
