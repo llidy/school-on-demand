@@ -5,14 +5,14 @@ import br.com.schoolondemand.domain.student.dto.StudentRequestDto
 import br.com.schoolondemand.domain.student.dto.StudentResponseDto
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.WebDataBinder
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.util.UriComponentsBuilder
 import javax.validation.Valid
 
 @RestController
 @RequestMapping("/students")
-class StudentController(
-    private val studentService: StudentService) {
+class StudentController(private val studentService: StudentService) {
 
     @GetMapping
     fun findAllStudents(studentResponseDto: StudentResponseDto
@@ -47,6 +47,10 @@ class StudentController(
         val studentResponseDto = studentService.createRegistrationStudent(studentRequestDto)
         val uri = uriBuilder.path("/students/${studentResponseDto.id}").build().toUri()
         return ResponseEntity.created(uri).body(studentResponseDto)
+    }
+    @InitBinder("studentRequestDto")
+    fun binder(binder: WebDataBinder){
+        binder.addValidators(SingleField(studentService))
     }
 
     @PutMapping("/{id}")

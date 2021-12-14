@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0af9b1b-e1c1-49e7-b520-1f76817faebe" name="Changes" comment="Incluindo: tratativa de erros e validator unico" />
+    <list default="true" id="f0af9b1b-e1c1-49e7-b520-1f76817faebe" name="Changes" comment="Incluindo: tratativa de erros e validator unico">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/SingleField.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/SingleField.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/SingleField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/SingleField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/schoolondemand/domain/student/StudentService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/Student.kt" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/SingleField.kt" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/kotlin/br/com/schoolondemand/domain/student/StudentService.kt" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
